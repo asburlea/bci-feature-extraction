@@ -3,13 +3,13 @@ Plot band power features in real time
 """
 
 import matplotlib.pyplot as plt
-from pylsl import StreamInlet, resolve_stream
+from pylsl import StreamInlet, resolve_byprop, resolve_byprop
 from src.window import SlidingWindow
 from src.bandpower import BandPower
 
 FS = 250
 
-streams = resolve_stream("type", "EEG")
+streams = resolve_byprop("type", "EEG", 5)
 inlet = StreamInlet(streams[0])
 
 window = SlidingWindow(FS, FS // 4)
