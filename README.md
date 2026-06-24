@@ -1,9 +1,12 @@
-# bci-online-preprocessing
-This repository focuses on preprocessing EEG signals in real time.
-All operations are causal and suitable for streaming applications.
+# bci-feature-extraction
 
-Topics covered in this repository:
-- Causal band-pass filtering
-- Stateful filter design
-- Sliding window segmentation
-- Offline vs online comparison
+This repository implements feature extraction methods designed
+for real-time EEG-based BCIs.
+
+Key ideas:
+- Sliding windows on streaming data
+- Low-latency feature computation
+- Feature stability over time
+
+Features implemented:
+- Band power (Welch PSD)
